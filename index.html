@@ -18,11 +18,16 @@
     <!-- sticky header -->
     <div class="sticky-header" id="stickyHeader">
       <div class="container">
-        <span>Premium HDPE Pipes & Coils</span>
-        <div>
-          <span>₹4,80,000 – 7,90,000</span>
-          <a href="#contact" class="btn-primary">Get Custom Quote</a>
+        <div class="sticky-left">
+          <img src="assets/hero-img1.jpg" alt="" class="sticky-img" />
+          <div>
+            <p class="sticky-title">
+              Premium HDPE Pipes & Coils for Modern Infrastructure
+            </p>
+            <p class="sticky-price">₹4,80,000 – 7,90,000</p>
+          </div>
         </div>
+        <a href="#contact" class="btn-primary">Get Custom Quote</a>
       </div>
     </div>
 
@@ -337,7 +342,18 @@
 
         <div class="row-images">
           <div class="app-card">
-            <img src="assets/vers-app-img1.png" alt="Fishnet Manufacturing" />
+            <img src="assets/hero-img1.jpg" alt="Fishnet Manufacturing" />
+            <div class="card-overlay">
+              <h4>Fishnet Manufacturing</h4>
+              <p>
+                High-performance twisting solutions for packaging yarn,
+                strapping materials, and reinforcement threads used in modern
+                packaging applications.
+              </p>
+            </div>
+          </div>
+          <div class="app-card">
+            <img src="assets/hero-img1.jpg" alt="Fishnet Manufacturing" />
             <div class="card-overlay">
               <h4>Fishnet Manufacturing</h4>
               <p>
@@ -359,18 +375,7 @@
             </div>
           </div>
           <div class="app-card">
-            <img src="assets/vers-app-img1.png" alt="Fishnet Manufacturing" />
-            <div class="card-overlay">
-              <h4>Fishnet Manufacturing</h4>
-              <p>
-                High-performance twisting solutions for packaging yarn,
-                strapping materials, and reinforcement threads used in modern
-                packaging applications.
-              </p>
-            </div>
-          </div>
-          <div class="app-card">
-            <img src="assets/vers-app-img1.png" alt="Fishnet Manufacturing" />
+            <img src="assets/hero-img1.jpg" alt="Fishnet Manufacturing" />
             <div class="card-overlay">
               <h4>Fishnet Manufacturing</h4>
               <p>
@@ -733,5 +738,36 @@
       </div>
     </footer>
     <script src="script.js"></script>
+
+    <!-- modals -->
+    <!-- Modal 1 - Catalogue -->
+    <div class="modal-overlay" id="catalogueModal">
+      <div class="modal">
+        <button class="modal-close" id="closeCatalogueModal">✕</button>
+        <h3>Let us email the entire catalogue to you</h3>
+        <form>
+          <label>Your Email *</label>
+          <input type="email" placeholder="example@gmail.com" />
+          <label>Your Contact (Optional)</label>
+          <input type="tel" placeholder="+91-0000000000" />
+          <button type="submit">Submit Form</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal 2 - Request a Quote -->
+    <div class="modal-overlay" id="quoteModal">
+      <div class="modal">
+        <button class="modal-close" id="closeQuoteModal">✕</button>
+        <h3>Request a call back</h3>
+        <form>
+          <input type="text" placeholder="Full Name" />
+          <input type="text" placeholder="Company Name" />
+          <input type="email" placeholder="Email Address" />
+          <input type="tel" placeholder="+91 7003026616" />
+          <button type="submit">Submit Form</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

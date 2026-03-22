@@ -83,6 +83,16 @@ document.addEventListener("DOMContentLoaded", () => {
   mainImageContainer.appendChild(zoomResult);
 
   const ZOOM_LEVEL = 2;
+  const hasImage = () => img.src.includes("assets/");
+
+  // Only enable zoom on non-touch devices
+  if (window.matchMedia("(hover: hover)").matches) {
+    mainImageContainer.addEventListener("mouseenter", () => {
+      if (!hasImage()) return;
+      lens.style.display = "block";
+      zoomResult.style.display = "block";
+    });
+  }
 
   mainImageContainer.addEventListener("mousemove", (e) => {
     if (!img.src || img.src === window.location.href) return;
@@ -100,8 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
     zoomResult.style.backgroundImage = `url('${img.src}')`;
     zoomResult.style.backgroundSize = `${rect.width * ZOOM_LEVEL}px ${rect.height * ZOOM_LEVEL}px`;
     zoomResult.style.backgroundPosition = `-${x * ZOOM_LEVEL - zoomResult.offsetWidth / 2}px -${y * ZOOM_LEVEL - zoomResult.offsetHeight / 2}px`;
-
-    const hasImage = () => img.src.includes("assets/");
 
     mainImageContainer.addEventListener("mouseenter", () => {
       if (!hasImage()) return;
@@ -147,5 +155,39 @@ document.addEventListener("DOMContentLoaded", () => {
       tabs.forEach((t) => t.classList.remove("active"));
       tab.classList.add("active");
     });
+  });
+
+  // modals
+
+  // modal 1 - Catalogue
+  const catalogueModal = document.getElementById("catalogueModal");
+  const downloadBtn = document.querySelector(".btn-download");
+  const closeCatalogueModal = document.getElementById("closeCatalogueModal");
+
+  downloadBtn.addEventListener("click", () => {
+    catalogueModal.classList.add("open");
+  });
+
+  closeCatalogueModal.addEventListener("click", () => {
+    catalogueModal.classList.remove("open");
+  });
+
+  // modal 2 - Request a quote
+  const quoteModal = document.getElementById("quoteModal");
+  const reqBtn = document.querySelector(".req-btn");
+  const closeQuoteModal = document.getElementById("closeQuoteModal");
+
+  reqBtn.addEventListener("click", () => {
+    quoteModal.classList.add("open");
+  });
+
+  closeQuoteModal.addEventListener("click", () => {
+    quoteModal.classList.remove("open");
+  });
+
+  // close modal when outside click
+  document.addEventListener("click", (e) => {
+    if (e.target === catalogueModal) catalogueModal.classList.remove("open");
+    if (e.target === quoteModal) quoteModal.classList.remove("open");
   });
 });
