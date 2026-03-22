@@ -293,7 +293,7 @@ a.btn-primary {
 }
 
 .mobile-menu.open {
-  display: flex;
+  display: flex !important;
 }
 
 .mobile-menu a {
@@ -412,6 +412,7 @@ a.btn-primary {
 #thumbnails img:hover,
 #thumbnails img.active {
   border-color: var(--primary);
+  border-width: 2px;
 }
 
 /* ── Right Column ── */
@@ -585,6 +586,33 @@ a.btn-primary {
 .btn-technical-specs:hover {
   background: var(--primary);
   color: white;
+}
+
+/* zoom elemnts */
+.zoom-lens {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  background: rgba(26, 60, 143, 0.1);
+  display: none;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.zoom-result {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  border: 2px solid var(--primary);
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 20;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* trust bar */
@@ -1048,6 +1076,7 @@ a.btn-primary {
   gap: 16px;
   overflow: visible;
   margin: 0 -410px; /* extends beyond container on right */
+  transition: transform 0.4s ease;
 }
 
 .app-card {
@@ -1501,8 +1530,8 @@ a.btn-primary {
   height: 44px;
   padding: 10px 24px;
   border-radius: 12px;
-  border: 1px solid #2B39903D;
-  background: #2B39900D;
+  border: 1px solid #2b39903d;
+  background: #2b39900d;
   color: var(--primary);
   font-family: "DM Sans", sans-serif;
   font-weight: 600;
@@ -1592,7 +1621,7 @@ a.btn-primary {
 .resource-dwnld h2 {
   font-size: 44px;
   text-align: center;
-  color: #0D0D0D;
+  color: #0d0d0d;
   max-width: 800px;
 }
 
@@ -1601,7 +1630,7 @@ a.btn-primary {
   line-height: 160%;
   letter-spacing: 0%;
   text-align: center;
-  color: #4D545C;
+  color: #4d545c;
   max-width: 800px;
 }
 
@@ -1610,9 +1639,9 @@ a.btn-primary {
   max-width: 1240px;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #CFD1D4;
+  border: 1px solid #cfd1d4;
   background: #ffffff;
-  box-shadow: 0px 2px 4px 0px #1B1C1D0A;
+  box-shadow: 0px 2px 4px 0px #1b1c1d0a;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1630,7 +1659,7 @@ a.btn-primary {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.006em;
-  color: #0D0D0D;
+  color: #0d0d0d;
   opacity: 0.8;
   max-width: 1044px;
 }
@@ -1643,7 +1672,7 @@ a.btn-primary {
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.006em;
-  color: #2B3990;
+  color: #2b3990;
   opacity: 0.8;
   white-space: nowrap;
 }
@@ -1651,7 +1680,7 @@ a.btn-primary {
 .dwnld-item a svg {
   width: 16px;
   height: 16px;
-  border: 2px solid #2B3990;
+  border: 2px solid #2b3990;
   border-radius: 2px;
 }
 
@@ -1669,8 +1698,8 @@ a.btn-primary {
   gap: 48px;
   display: flex;
   align-items: center;
-  background: linear-gradient(0deg, #2B3990, #2B3990);
-  box-shadow: 0px 16px 40px -8px #585C5F29;
+  background: linear-gradient(0deg, #2b3990, #2b3990);
+  box-shadow: 0px 16px 40px -8px #585c5f29;
 }
 
 .contact-left {
@@ -1694,7 +1723,7 @@ a.btn-primary {
   font-size: 18px;
   line-height: 160%;
   letter-spacing: -0.006em;
-  color: #FFFFFFCC;
+  color: #ffffffcc;
 }
 
 .contact-left p strong,
@@ -1703,7 +1732,7 @@ a.btn-primary {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.006em;
-  color: #FFFFFFCC;
+  color: #ffffffcc;
   text-decoration: underline;
 }
 
@@ -1712,7 +1741,7 @@ a.btn-primary {
   padding: 32px;
   box-sizing: border-box;
   border-radius: 24px;
-  background: #F7F8F9;
+  background: #f7f8f9;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1724,7 +1753,7 @@ a.btn-primary {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.006em;
-  color: #262A2E;
+  color: #262a2e;
 }
 
 .contact-right form {
@@ -1738,9 +1767,9 @@ a.btn-primary {
   height: 40px;
   padding: 10px 10px 10px 12px;
   border-radius: 8px;
-  border: 1px solid #E1E3E8;
+  border: 1px solid #e1e3e8;
   background: #ffffff;
-  box-shadow: 0px 1px 2px 0px #0A0D1408;
+  box-shadow: 0px 1px 2px 0px #0a0d1408;
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
   outline: none;
@@ -1748,7 +1777,7 @@ a.btn-primary {
 }
 
 .contact-right input:focus {
-  border-color: #2B3990;
+  border-color: #2b3990;
 }
 
 .contact-right button[type="submit"] {
@@ -1757,7 +1786,7 @@ a.btn-primary {
   padding: 12px 16px;
   border-radius: 10px;
   border: none;
-  background: #262A2E;
+  background: #262a2e;
   color: white;
   font-family: "DM Sans", sans-serif;
   font-weight: 600;
@@ -1767,7 +1796,7 @@ a.btn-primary {
 }
 
 .contact-right button[type="submit"]:hover {
-  background: #2B3990;
+  background: #2b3990;
 }
 
 /* footer */
