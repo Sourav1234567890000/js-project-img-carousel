@@ -3,7 +3,7 @@
 ## Screenshots
 
 ### sticky header
-![Mobile](screenshots/sticky-header.png)
+![sticky-header](screenshots/sticky-header.png)
 
 ### Zoom Feature
 ![Zoom](screenshot/zoom.png)
